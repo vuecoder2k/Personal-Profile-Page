@@ -66,21 +66,25 @@
 			padding-left: 8%;
 		}
 
-		.input-field {
-			font-size: 14px;
-			width: 27%;
-			height: 30px;
-			margin-top: 15px;
-			margin-bottom: 10px;
-			margin-left: 20px;
-		}
-		.input-field#message {
-			width: 27%;
-			height: 50px;
+		.input-field-container {
+			display: flex;
 		}
 
+		.input-field-container input {
+			font-size: 14px;
+			margin: 15px;
+			width: 180px;
+			height: 35px;
+		}
+
+		.input-field-container textarea {
+			font-size: 14px;
+			margin: 10px;
+			width: 250px;
+			height: 40px;
+		}
 		#submiting {
-			margin-left: 25%;
+			margin-left: 40%;
 			width: 45px;
 			height: 45px;
 		}
@@ -138,16 +142,19 @@
 				<td colspan="2">
 					<h3 class="heading-3">Contact with me:</h3>
 					<form>
-						<input class="input-field" type="text" name="name" id="name" placeholder="Your name">
-						<br>
-						<input class="input-field" type="email" name="email" id="email" required placeholder="example@gmail.com">
-						<br>
-
-						<input class="input-field" type="tel" name="phone-num" id="phone-num" required placeholder="0123 456 78">
-						<br>
-
-						<textarea class="input-field" placeholder="Write your message here" id="message"></textarea>
-						<br>
+						<div class="input-field-container">
+							<div class="input-field-item-1">
+							<input type="text" name="name" id="name" placeholder="Your name">
+							<br>
+							<input type="email" name="email" id="email" required placeholder="example@gmail.com">
+							</div>
+							
+							<div class="input-field-item-2">
+								<input type="tel" name="phone-num" id="phone-num" required placeholder="0123 456 78">
+								<br>
+								<textarea class="input-field" placeholder="Write your message here" id="message"></textarea>
+							</div>
+						</div>
 
 						<input type="image" src="images/send-icon.png" value="Sending" id="submiting">
 					</form>
