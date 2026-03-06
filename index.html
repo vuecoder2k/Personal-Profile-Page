@@ -12,27 +12,33 @@
 			border-radius: 20px;
 		}
 
-		table, td {
+		.layout, td {
 			border-radius: 10px;
-			background-color: #f9fcfb;
+			background-color: #c7c7c9;
 			padding: 0px;
 			border-collapse: collapse;
 		}
 
-		img {
-			width: 35%;
-			height: 35%;
+		.avatar {
+			width: 33%;
+			height: 33%;
 			border-radius: 130px;
 			margin-left: 30%;
 			margin-top: 3%;
 		}
-		.profile-heading h3 {
-			margin-left: 38%;
+
+		.heading-1 {
+			font-size: 20px;
+			text-align: center;
 		}
-		.profile-heading h4 {
-			margin-top: 10px;
-			margin-left: 35%;
-			margin-bottom: 10px;
+
+		.heading-2 {
+			font-size: 18px;
+			text-align: center;
+		}
+
+		.heading-3 {
+			font-size: 16px;
 		}
 
 		.profile-description {
@@ -50,52 +56,52 @@
 		.learning-space {
 			padding-left: 5%;
 		}
+
 		.skills-space {
 			padding-left: 5%;
 		}
-		.bottom {
-			width: 100%;
-			height: 50px;
+
+		.footer td {
+			background-color: #b6b6ba;
+			padding-left: 8%;
 		}
+
 		.input-field {
 			font-size: 14px;
-			width: 25%;
-			height: 28px;
-			padding: 3px;
-			margin: 5px;
+			width: 27%;
+			height: 30px;
+			margin-top: 15px;
+			margin-bottom: 10px;
+			margin-left: 20px;
 		}
-		 label {
-			padding-left: 20px;
+		.input-field#message {
+			width: 27%;
+			height: 50px;
 		}
-		#email {
-			margin-left: 6%;
-			margin-right: 8%;
-		}
+
 		#submiting {
-			margin-left: 20%;
-			width: 5%;
-			height: 5%;
+			margin-left: 25%;
+			width: 45px;
+			height: 45px;
 		}
+
 	</style>
 </head>
 <body>
 	<div class="container">
-
 		<table class="layout">
-
-			<tr class="top">
-				<td style="border-right: 1px solid black;">
-					<img src="/images/f4da9569-3dd4-41a6-8992-b2b77ef33953_512.webp" alt="avatar image" id="avatar">
+			<tr class="main">
+				<td>
+					<img class="avatar" src="images/f4da9569-3dd4-41a6-8992-b2b77ef33953_512.webp" alt="avatar image" id="avatar">
 
 					<div class="profile-heading">
-						<h3>Vue Thang</h3>
-						<h4>Software Engineer</h4>
+						<h1 class="heading-1">Vue Thang</h1>
+						<h2 class="heading-2">Software Engineer</h2>
 					</div>
 
 					<p class="profile-description">Hi, I'm a Software Engineer with 5 years experience,<br> my strengths working on Web development, Android application.</p>
 
 					<div class="profile-contact">
-						<h4>Contact with me: </h4>
 						<ul>
 							<li><p>Email: thangvue@gmail.com</p></li>
 							<li><p>Phone number: (84+) 0123 2323 24</p></li>
@@ -105,7 +111,7 @@
 
 				<td>
 					<div class="learning-space">
-						<h4>Learning:</h4>
+						<h3 class="heading-3">Learning:</h3>
 						<ul>
 							<li>DNU university (2018 - 2023)</li>
 							<li>High School Programming Competition (2017)</li>
@@ -114,7 +120,7 @@
 					</div>
 
 					<div class="skills-space">
-						<h4>Skills: </h4>
+						<h3 class="heading-3">Skills: </h3>
 						<ul>
 							<li>Linux System Admin</li>
 							<li>Version Control Git</li>
@@ -128,18 +134,21 @@
 				</td>
 			</tr>
 
-			<tr class="bottom" style="border-top: 1px solid black;">
+			<tr class="footer">
 				<td colspan="2">
+					<h3 class="heading-3">Contact with me:</h3>
 					<form>
-						<label for="email">Email</label>
+						<input class="input-field" type="text" name="name" id="name" placeholder="Your name">
+						<br>
 						<input class="input-field" type="email" name="email" id="email" required placeholder="example@gmail.com">
+						<br>
 
-						<label for="phone-num">Phone</label>
 						<input class="input-field" type="tel" name="phone-num" id="phone-num" required placeholder="0123 456 78">
 						<br>
-						<label for="message">Message me</label>
+
 						<textarea class="input-field" placeholder="Write your message here" id="message"></textarea>
-						
+						<br>
+
 						<input type="image" src="images/send-icon.png" value="Sending" id="submiting">
 					</form>
 				</td>
